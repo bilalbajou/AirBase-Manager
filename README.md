@@ -1,8 +1,8 @@
-# ✈️ AirBase Manager
+# AirBase Manager
 
 **AirBase Manager** est une application web PHP simple et moderne destinée à la gestion de bases aériennes, de pilotes, d'avions et de vols. Elle a été conçue comme un outil pédagogique pour pratiquer le développement PHP et les requêtes SQL complexes.
 
-## 📋 Fonctionnalités
+## Fonctionnalités
 
 *   **Gestion des Pilotes** : Liste détaillée avec grades, adresses et salaires.
 *   **Gestion des Avions** : Suivi de la flotte, capacités et localisations.
@@ -11,14 +11,14 @@
 *   **Exercices SQL** : Une section dédiée intégrant 30 requêtes SQL pré-programmées pour l'analyse de données (jointures, agrégations, filtres).
 *   **Interface Moderne** : UI épurée en bleu et blanc pour une expérience utilisateur agréable.
 
-## 🛠️ Prérequis
+## Prérequis
 
 *   **Serveur Web** : Apache ou Nginx (inclus dans WAMP/XAMPP).
 *   **PHP** : Version 7.4 ou supérieure.
 *   **Base de Données** : MySQL ou MariaDB.
 *   **Extensions PHP** : PDO activé.
 
-## 🚀 Installation
+## Installation
 
 ### 1. Cloner le projet
 ```bash
@@ -46,13 +46,13 @@ php -S localhost:8000
 ```
 Puis ouvrez `http://localhost:8000` dans votre navigateur.
 
-## ⚙️ Initialisation de la Base de Données
+## Initialisation de la Base de Données
 
 Une fois l'application lancée :
-1.  Cliquez sur le bouton vert **"⚙️ Initialiser DB"** sur la page d'accueil.
+1.  Cliquez sur le bouton vert **" Initialiser DB"** sur la page d'accueil.
 2.  Cela créera automatiquement les tables (`PILOTE`, `AVION`, `VOL`) et insérera les données de test nécessaires pour les exercices.
 
-## 📚 Structure du Projet
+## Structure du Projet
 
 ```
 AirBase Manager/
@@ -70,10 +70,10 @@ AirBase Manager/
 └── README.md            # Documentation
 ```
 
-## 📝 Auteur
+## Auteur
 
 Développé par **Bilal Bajou**.
 
-## 📄 Licence
+## Licence
 
 Ce projet est sous licence MIT.
