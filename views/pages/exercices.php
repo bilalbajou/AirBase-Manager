@@ -36,7 +36,7 @@ $questions = [
     33 => "Donner les appareils (leur numéro) localisés dans la même ville que l'avion numéro 100."
 ];
 
-echo '<h2>📚 Exercices SQL (TP)</h2>';
+echo '<h2>Exercices SQL (TP)</h2>';
 echo '<div class="exercises-container">';
 
 foreach ($questions as $id => $question) {

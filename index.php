@@ -255,16 +255,16 @@ $action = $_GET['action'] ?? 'home';
 
 <body>
     <div class="container">
-        <h1>✈️ AirBase Manager</h1>
+        <h1>AirBase Manager</h1>
         <p class="subtitle">Système de Gestion de Vols</p>
 
         <div class="nav">
-            <a href="?action=home" class="btn">🏠 Accueil</a>
-            <a href="?action=init" class="btn btn-success">⚙️ Initialiser DB</a>
-            <a href="?action=pilotes" class="btn">👨‍✈️ Pilotes</a>
-            <a href="?action=avions" class="btn">🛩️ Avions</a>
-            <a href="?action=vols" class="btn">📋 Vols</a>
-            <a href="?action=exercices" class="btn btn-ex">📚 Exercices SQL</a>
+            <a href="?action=home" class="btn">Accueil</a>
+            <a href="?action=init" class="btn btn-success">Initialiser DB</a>
+            <a href="?action=pilotes" class="btn">Pilotes</a>
+            <a href="?action=avions" class="btn">Avions</a>
+            <a href="?action=vols" class="btn">Vols</a>
+            <a href="?action=exercices" class="btn btn-ex">Exercices SQL</a>
         </div>
 
         <?php
@@ -273,12 +273,12 @@ $action = $_GET['action'] ?? 'home';
             case 'init':
                 echo '<div class="alert alert-success">';
                 if ($manager->createTables()) {
-                    echo '✅ Tables créées avec succès !<br>';
+                    echo 'Tables créées avec succès !<br>';
                     if ($manager->insertSampleData()) {
-                        echo '✅ Données de test insérées !';
+                        echo 'Données de test insérées !';
                     }
                 } else {
-                    echo '❌ Erreur lors de la création des tables.';
+                    echo 'Erreur lors de la création des tables.';
                 }
                 echo '</div>';
 
@@ -307,7 +307,7 @@ $action = $_GET['action'] ?? 'home';
 
             case 'pilotes':
                 $pilotes = $manager->getAllPilotes();
-                echo '<h2>👨‍✈️ Liste des Pilotes</h2>';
+                echo '<h2>Liste des Pilotes</h2>';
                 echo '<table>';
                 echo '<tr><th>NUMPIL</th><th>Nom</th><th>Adresse</th><th>Salaire</th></tr>';
                 foreach ($pilotes as $pilote) {
@@ -323,7 +323,7 @@ $action = $_GET['action'] ?? 'home';
 
             case 'avions':
                 $avions = $manager->getAllAvions();
-                echo '<h2>🛩️ Flotte d\'Avions</h2>';
+                echo '<h2>Flotte d\'Avions</h2>';
                 echo '<table>';
                 echo '<tr><th>NUMAV</th><th>Nom</th><th>Capacité</th><th>Localisation</th></tr>';
                 foreach ($avions as $avion) {
@@ -339,7 +339,7 @@ $action = $_GET['action'] ?? 'home';
 
             case 'vols':
                 $vols = $manager->getAllVols();
-                echo '<h2>📋 Planning des Vols</h2>';
+                echo '<h2>Planning des Vols</h2>';
                 echo '<table>';
                 echo '<tr><th>NUMVOL</th><th>Pilote</th><th>Avion</th><th>Départ</th><th>Arrivée</th><th>Heure Départ</th><th>Heure Arrivée</th></tr>';
                 foreach ($vols as $vol) {
@@ -363,7 +363,7 @@ $action = $_GET['action'] ?? 'home';
             default:
                 $stats = $manager->getStatistics();
                 ?>
-                <h2>📊 Tableau de Bord</h2>
+                <h2>Tableau de Bord</h2>
                 <div class="stats">
                     <div class="stat-card">
                         <h3><?= $stats['total_pilotes'] ?></h3>
@@ -383,23 +383,7 @@ $action = $_GET['action'] ?? 'home';
                     </div>
                 </div>
 
-                <div class="info-box">
-                    <h3>🚀 Démarrage Rapide</h3>
-                    <ol>
-                        <li>Cliquez sur <strong>"Initialiser DB"</strong> pour créer les tables et insérer les données de test
-                        </li>
-                        <li>Explorez les sections : <strong>Pilotes</strong>, <strong>Avions</strong>, <strong>Vols</strong>
-                        </li>
-                        <li>Utilisez la classe <code>AirBaseManager</code> pour vos requêtes personnalisées</li>
-                    </ol>
-
-                    <h3 style="margin-top: 20px;">📋 Structure de la Base</h3>
-                    <ul style="margin-left: 20px; line-height: 1.8;">
-                        <li><strong>PILOTE</strong> : NUMPIL, NOMPIL, ADR, SAL</li>
-                        <li><strong>AVION</strong> : NUMAV, NOMAV, CAP, LOC</li>
-                        <li><strong>VOL</strong> : NUMVOL, NUMPIL, NUMAV, VILLE_DEP, VILLE_ARR, H_DEP, H_ARR</li>
-                    </ul>
-                </div>
+             
                 <?php
                 break;
         }
